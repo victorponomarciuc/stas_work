@@ -1,0 +1,142 @@
+
+@import "../../libs/normalize-scss/sass/normalize/import-now";
+@import "skin";
+@import "variables";
+@import "mixins";
+@import "mixins-media";
+@import "extends";
+
+@import "common";
+@import "header/header";
+@import "header/header-overlay";
+@import "header/header-menu";
+@import "header/header-logo";
+@import "header/header-navbar";
+@import "header/header-content";
+
+@import "sections/section-skills";
+@import "sections/section-about";
+@import "sections/section-form";
+@import "sections/section-posts";
+
+@import "footer";
+
+* {box-sizing: border-box;}
+body {background: $color-primary;}
+.decor {
+  position: relative;
+  max-width: 500px;
+  margin: 50px auto 0;
+  background: $color-light;
+  border-radius: 30px;
+}
+.form-left-decoration,
+.form-right-decoration {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  background: $color-accent;
+  border-radius: 20px;
+}
+.form-left-decoration {
+  bottom: 60px;
+  left: -30px;
+}
+.form-right-decoration {
+  top: 60px;
+  right: -30px;
+}
+.form-left-decoration:before,
+.form-left-decoration:after,
+.form-right-decoration:before,
+.form-right-decoration:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  border-radius: 30px;
+  background: $color-light;
+}
+.form-left-decoration:before {top: -20px;}
+.form-left-decoration:after {
+  top: 20px;
+  left: 10px;
+}
+.form-right-decoration:before {
+  top: -20px;
+  right: 0;
+}
+.form-right-decoration:after {
+  top: 20px;
+  right: 10px;
+}
+.circle {
+  position: absolute;
+  bottom: 80px;
+  left: -55px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: $color-light;
+}
+.form-inner {padding: 50px;}
+.form-inner input,
+.form-inner textarea {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: $color-gray-light;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 1.25em;
+  font-family: $font-main;
+}
+.form-inner input[type="submit"] {
+  margin-top: 1.87em;
+  background:$color-accent;
+  color: $color-light;
+  font-size: 1.1em;
+}
+.form-inner textarea {resize: none;}
+.form-inner h3 {
+  margin-top: 0;
+  font-family: $font-main;
+  font-weight: 500;
+  font-size: 1.5em;
+  color: $color-gray-dark;
+}
+[type="file"] {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+
+[type="file"] + label {
+  
+  background: $color-accent;
+  border-radius: 50px;
+  color: $color-light;
+  cursor: pointer;
+  display: inline-block;
+    font-family: $font-main;
+    font-size: $font-size;
+  font-weight: 500;
+  outline: none;
+  padding: 1rem 50px;
+  position: relative;
+  transition: all 0.3s;
+  vertical-align: middle;
+  &:hover {
+    background-color: darken($color-accent, 10%);
+  }
+  &.btn-1 {
+    background-color: $color-accent;
+    box-shadow: 0 6px darken($color-accent, 10%);
+    transition: none;
+    &:hover {
+      box-shadow: 0 4px darken($color-accent, 10%);
+      top: 2px;
+    }
+  }}
